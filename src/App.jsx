@@ -1,7 +1,8 @@
 import "./App.css";
+import Forecast from "./components/Forecast";
 
 function App() {
-  return <div>Weather App</div>;
+  return <Forecast />;
 }
 
 export default App;
