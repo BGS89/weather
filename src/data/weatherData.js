@@ -10,7 +10,7 @@ const fetchForecast = (city) => {
   return weatherApi
     .get(`/forecast.json?key=${key}&q=${city}&days=10&aqi=no&alerts=no`)
     .then((response) => {
-      return response.data.forecast.forecastday;
+      return response.data;
     });
 };
 
