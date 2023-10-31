@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { fetchForecast } from "../data/weatherData";
 
-function Forecast() {
+function Forecast({ city }) {
   const [forecast, setForecast] = useState({});
 
   useEffect(() => {
-    fetchForecast("london")
+    fetchForecast(city)
       .then((dataFromApi) => {
         setForecast(dataFromApi);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [city]);
 
   console.log(forecast);
 
