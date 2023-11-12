@@ -4,7 +4,7 @@ import SearchForm from "./components/SearchForm";
 import { useState } from "react";
 
 function App() {
-  const [city, setCity] = useState(null);
+  const [city, setCity] = useState("");
 
   return (
     <main>
